@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media(max-width:380px) {
+    .page {
+        background: #0C0C0C;
+        color: #fff;
+        height: 100vh;
+    }
+
+    .container {
+        max-width: 325px;
+        width: 100%;
+        margin: auto;
+    }
+
+    nav {
+        padding: 20px 0px;
+    }
+
+    nav .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-icons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .accounts-menu {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .accounts-menu .card {
+        background: #2B2B2B;
+        width: 100%;
+        height: 155px;
+        max-width: 157px;
+        border-radius: 15px;
+    }
+
+    .cashaccount {
+        padding: 15px;
+    }
+
+    .cashaccount img {}
+
+    .account-title {
+        margin: 10px 0px;
+        font-size: 13px;
+        color: #ffffff95;
+    }
+
+    .account-balance {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .addaccount {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .addaccount p {
+        font-size: 12px;
+    }
+
+    /* Premuim */
+
+    .premium {
+        margin-top: 20px;
+        width: 100%;
+        height: 155px;
+        background: #2B2B2B;
+        border-radius: 15px;
+    }
+}
