@@ -10,8 +10,8 @@
 ::-webkit-scrollbar {
     display: none;
 }
-
-@media(max-width:380px) {
+/* @media(max-width:380px) */
+@media(max-width:415px) {
     .page {
         background: #0C0C0C;
         color: #fff;
