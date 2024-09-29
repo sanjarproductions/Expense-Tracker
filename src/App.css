@@ -10,8 +10,9 @@
 ::-webkit-scrollbar {
     display: none;
 }
-/* @media(max-width:380px) */
-@media(max-width:415px) {
+/* @media(max-width:380px) Iphone SE & others */ 
+/* @media(max-width:415px) Iphone 11 & Iphone XR */ 
+@media(max-width:430px) {
     .page {
         background: #0C0C0C;
         color: #fff;
