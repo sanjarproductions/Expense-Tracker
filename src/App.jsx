@@ -1,4 +1,6 @@
 import './App.css'
+import { useState } from 'react'
+
 import NavSettingsIcon from "./assets/settings.svg"
 import NavNotificationsIcon from "./assets/notifications.svg"
 import AddIcon from "./assets/AddIcon.svg"
@@ -10,11 +12,25 @@ import MoreIcon from "./assets/footericons/more.svg"
 import AnaliticsIcon from "./assets/footericons/analitics.svg"
 import PlaningIcon from "./assets/footericons/planing.svg"
 
+import Popup from "./components/popup/Popup"
+
 function App() {
+
+  const [PopUpVisible, setPopUpVisible] = useState(false)
+
+  const handleClick = () => {
+    setPopUpVisible(!PopUpVisible)
+  }
+
 
   return (
     <>
       <div className="dashboard page">
+
+        {
+          PopUpVisible && (<Popup />)
+        }
+
         <nav>
           <div className="container">
             <p>WalletpApp</p>
@@ -65,7 +81,10 @@ function App() {
                 <img src={PlaningIcon} alt="" />
                 <p>Planing</p>
               </div>
-              <img src={AddIcon} alt="" />
+
+              <button onClick={handleClick} className='action-popup'> <img src={AddIcon} alt="" /> </button>
+
+
               <div className='menu__item'>
                 <img src={AnaliticsIcon} alt="" />
                 <p>Statistics</p>
@@ -78,7 +97,10 @@ function App() {
           </div>
         </footer>
       </div>
+
     </>
+
+
   )
 }
 
