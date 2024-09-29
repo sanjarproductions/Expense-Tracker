@@ -41,7 +41,25 @@ function App() {
         </main>
         <footer>
           <div className="container">
-
+            <div>
+              <div>
+                <img src="" alt="" />
+                <p>Home</p>
+              </div>
+              <div>
+                <img src="" alt="" />
+                <p>Planing</p>
+              </div>
+              <img src={AddIcon} alt="" />
+              <div>
+                <img src="" alt="" />
+                <p>Statistics</p>
+              </div>
+              <div>
+                <img src="" alt="" />
+                <p>More</p>
+              </div>
+            </div>
           </div>
         </footer>
       </div>
