@@ -1,16 +1,51 @@
-.popup {
-    position: absolute;
-    z-index: 1;
-    background: #2B2B2B;
-    width: 100%;
-    height: 92%;
-    bottom: 0;
-    border-radius: 15px 15px 0px 0px;
-    padding: 15px 25px;
-}
+@media(max-width:430px) {
+    .popup {
+        position: absolute;
+        z-index: 1;
+        background: #2B2B2B;
+        width: 100%;
+        height: 95%;
+        bottom: 0;
+        border-radius: 15px 15px 0px 0px;
+        padding: 15px 25px;
 
-.cancelbtn {
-    background: transparent;
-    border: none;
-    color: #0578F7;
+        /* Initial state: move the popup down off the screen */
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease-in-out;
+        /* Smooth transition */
+    }
+
+    .popup.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .cancelbtn {
+        background: transparent;
+        border: none;
+        color: #0578F7;
+    }
+
+    .popup-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .popup-nav button {
+        color: #0578F7;
+        font-size: 15px;
+        background: transparent;
+        border: none;
+    }
+
+    .popup-nav strong {
+        font-weight: normal;
+        font-size: 16px;
+        color: #fff;
+    }
 }

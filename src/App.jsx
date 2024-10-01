@@ -1,5 +1,10 @@
 import './App.css'
 import { useState } from 'react'
+import Popup from "./components/popup/Popup"
+import { Chart as ChartJS } from 'chart.js/auto'
+import { Line } from 'react-chartjs-2'
+import GraphData from "./data/data.json"
+// import SecondGraphData from "./data/fackedata.json"
 
 import NavSettingsIcon from "./assets/settings.svg"
 import NavNotificationsIcon from "./assets/notifications.svg"
@@ -12,25 +17,26 @@ import MoreIcon from "./assets/footericons/more.svg"
 import AnaliticsIcon from "./assets/footericons/analitics.svg"
 import PlaningIcon from "./assets/footericons/planing.svg"
 
-import Popup from "./components/popup/Popup"
 
 function App() {
+  const [isPopUpVisible, setPopUpVisible] = useState(false)
 
-  const [PopUpVisible, setPopUpVisible] = useState(false)
-
-  const handleClick = () => {
-    setPopUpVisible(!PopUpVisible)
+  const openPopUp = () => {
+    setPopUpVisible(true)
   }
+
+  const closePopUp = () => {
+    setPopUpVisible(false)
+  }
+
+
 
 
   return (
     <>
+      <Popup isPopUpVisible={isPopUpVisible} closePopUp={closePopUp} />
+
       <div className="dashboard page">
-
-        {
-          PopUpVisible && (<Popup />)
-        }
-
         <nav>
           <div className="container">
             <p>WalletpApp</p>
@@ -67,6 +73,25 @@ function App() {
             </section>
             <section className='trend'>
               <h3>Balance Trend</h3>
+
+              <Line data={
+                {
+                  labels: GraphData.map((data) => data.label),
+                  datasets: [{
+                    label: "Money",
+                    data: GraphData.map((data) => data.value),
+                    backgroundColor: "#0a84fc",
+                    borderColor: "#0a84fc",
+                  },
+                    // {
+                    //   label:"somethingelse",
+                    //   data: SecondGraphData.map((i) => i.value),
+                    //   backgroundColor: "#ff0000",
+                    //   borderColor: "#ff0000",
+                    // }
+                  ]
+                }}></Line>
+
             </section>
           </div>
         </main>
@@ -81,10 +106,7 @@ function App() {
                 <img src={PlaningIcon} alt="" />
                 <p>Planing</p>
               </div>
-
-              <button onClick={handleClick} className='action-popup'> <img src={AddIcon} alt="" /> </button>
-
-
+              <button onClick={openPopUp} className='action-popup'> <img src={AddIcon} alt="" /> </button>
               <div className='menu__item'>
                 <img src={AnaliticsIcon} alt="" />
                 <p>Statistics</p>
@@ -97,7 +119,6 @@ function App() {
           </div>
         </footer>
       </div>
-
     </>
 
 
