@@ -19,6 +19,8 @@ import PlaningIcon from "./assets/footericons/planing.svg"
 
 
 function App() {
+  const [transactions, setTransactions] = useState([])
+  const [balance, setBalance] = useState(0)
   const [isPopUpVisible, setPopUpVisible] = useState(false)
 
   const openPopUp = () => {
@@ -52,7 +54,7 @@ function App() {
               <div className="cashaccount card" >
                 <img src={CashIcon} alt="" />
                 <p className='account-title'>CASH</p>
-                <p className='account-balance'>100 000.00</p>
+                <p className='account-balance'>{balance}</p>
                 <p>USD</p>
               </div>
               <div className="addaccount card" >
