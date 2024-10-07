@@ -41,7 +41,7 @@ function App() {
       <div className="dashboard page">
         <nav>
           <div className="container">
-            <p>WalletpApp</p>
+            <p>Expenses</p>
             <div className='nav-icons'>
               <img src={NavNotificationsIcon} alt="" />
               <img src={NavSettingsIcon} alt="" />
@@ -84,14 +84,7 @@ function App() {
                     data: GraphData.map((data) => data.value),
                     backgroundColor: "#0a84fc",
                     borderColor: "#0a84fc",
-                  },
-                    // {
-                    //   label:"somethingelse",
-                    //   data: SecondGraphData.map((i) => i.value),
-                    //   backgroundColor: "#ff0000",
-                    //   borderColor: "#ff0000",
-                    // }
-                  ]
+                  }, ]
                 }}></Line>
 
             </section>
