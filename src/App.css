@@ -7,172 +7,148 @@
     font-family: "Inter", sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    background: #0C0C0C;
+}
+
+nav {
+    padding: 50px 0px;
+
+}
+
+nav .container {
+    /* border: 1px solid #fff; */
+    padding: 12px 35px;
+    border-radius: 40px;
+    background: #2B2B2B;
+}
+
+nav .logo {
+    max-width: 35px;
+}
+
+nav .flex {
+    justify-content: space-between;
+
+}
+
+nav .flex div {
+    display: flex;
+    gap: 30px;
+}
+
+nav .flex a {
+    color: #fff;
+}
+
+nav .flex a:hover {
+    /* border: 1px solid #fff; */
+}
+
+main {
+    color: #fff;
+    padding: 50px 0px;
+}
+
+main .container {
+    background: #2B2B2B;
+    border-radius: 20px;
+    padding: 12px 25px;
+}
+
+.balance {
+    padding: 20px 0px;
+}
+
+.balance .client-balance__flex {
+    gap: 12px;
+    padding-bottom: 10px;
+}
+
+.balance .client-balance__flex p {
+    font-size: 28px;
+}
+
+.something input {
+    outline: none;
+    width: 100%;
+    outline: none;
+    max-width: 300px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.something input:active {
+    transform: scale(1.05);
+}
+
+.something .btns {
+    padding: 20px 0px;
+    display: flex;
+    gap: 35px;
+}
+
+.something .btns button {
+    font-size: 18px;
+    padding: 12px 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.something .btns button:first-child:hover {
+    background: #fff;
+    color: #2B2B2B;
+    border: none;
+    border: 1px solid #fff;
+}
+
+.something .btns button:last-child:hover {
+    background: #0578F7;
+    color: #fff;
+    border: none;
+    border: 1px solid #0578F7;
+}
+
+.history {
+    padding: 12px 0px;
+}
+
+.history ul li{
+    padding: 5px 0px;
+}
+
+
+
+/* 
 ::-webkit-scrollbar {
     display: none;
-}
+} */
 
 
-/* @media(max-width:380px) Iphone SE & others */ 
-/* @media(max-width:415px) Iphone 11 & Iphone XR */ 
-
-@media(max-width:430px) {
-    .page {
-        background: #0C0C0C;
-        color: #fff;
-        height: 100vh;
-    }
-
-    .container {
-        max-width: 325px;
-        width: 100%;
-        margin: auto;
-    }
-
-    nav {
-        padding: 20px 0px;
-    }
-
-    nav .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .nav-icons {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .accounts-menu {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .accounts-menu .card {
-        background: #2B2B2B;
-        width: 100%;
-        height: 155px;
-        max-width: 157px;
-        border-radius: 15px;
-    }
-
-    .cashaccount {
-        padding: 15px;
-    }
-
-    .account-title {
-        margin: 10px 0px;
-        font-size: 13px;
-        color: #ffffff95;
-    }
-
-    .account-balance {
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    .addaccount {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .addaccount p {
-        font-size: 12px;
-    }
-
-    /* Premuim */
-
-    .premium {
-        margin-top: 20px;
-        width: 100%;
-        background: #2B2B2B;
-        border-radius: 15px;
-        padding: 10px 15px;
-    }
-
-    .premium .flex {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .premium-text h2 {
-        font-size: 14px;
-        margin-bottom: 7px;
-    }
-
-    .premium-text p {
-        font-size: 11px;
-    }
-
-    .getpremium-btn {
-        margin-top: 20px;
-        width: 100%;
-        background: #162331;
-        color: #0a84fc; 
-        /* color: ; */
-        border: none;
-        padding: 12px 0px;
-        border-radius: 5px;
-    }
-
-    /* Trend */
-
-
-    .trend{
-        width: 100%;
-        background: #2B2B2B;
-        height: 255px;
-        border-radius: 15px;
-        margin-top: 25px;
-        padding: 25px;
-    }
-
-    .trend h3{
-        margin-bottom: 30px;
-    }
-
-
-    /* Bottom Menu */
-
-    .menu {
-        position: fixed;
-        bottom: 3%;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .menu-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 25px;
-        background: #1f1f1f;
-        border-radius: 15px;
-        padding: 10px 26px;
-    }
-
-    .menu__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-    }
-
-    .action-popup{
-        background: transparent;
-        border: none;
-    }
-
-    .menu__item p {
-        font-size: 10px;
-    }
-
-}
+/* @media(max-width:380px) Iphone SE & others */
+/* @media(max-width:415px) Iphone 11 & Iphone XR */
