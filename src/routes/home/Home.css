@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    background: #0C0C0C;
+}
+
+nav {
+    padding: 50px 0px;
+
+}
+
+nav .container {
+    /* border: 1px solid #fff; */
+    padding: 12px 35px;
+    border-radius: 40px;
+    background: #2B2B2B;
+}
+
+nav .logo {
+    max-width: 35px;
+}
+
+nav .flex {
+    justify-content: space-between;
+
+}
+
+nav .flex div {
+    display: flex;
+    gap: 30px;
+}
+
+nav .flex a {
+    color: #fff;
+}
+
+nav .flex a:hover {
+    /* border: 1px solid #fff; */
+}
+
+main {
+    color: #fff;
+    padding: 50px 0px;
+}
+
+main .container {
+    background: #2B2B2B;
+    border-radius: 20px;
+    padding: 12px 25px;
+}
+
+.balance {
+    padding: 20px 0px;
+}
+
+.balance .client-balance__flex {
+    gap: 12px;
+    padding-bottom: 10px;
+}
+
+.balance .client-balance__flex p {
+    font-size: 28px;
+}
+
+.app .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.app input {
+    outline: none;
+    width: 100%;
+    outline: none;
+    max-width: 300px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.app input:active {
+    transform: scale(1.05);
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+
+
+.app .actions {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.app .actions select {
+    width: 100%;
+    max-width: 180px;
+    outline: none;
+    padding: 10px 11px;
+    border-radius: 20px;
+    border: none;
+}
+
+/*  */
+input::-ms-expand {
+    display: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+/*  */
+
+.app .actions button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.app .actions button:first-child:hover {
+    background: #fff;
+    color: #2B2B2B;
+    border: none;
+    border: 1px solid #fff;
+}
+
+.app .actions button:last-child:hover {
+    background: #0578F7;
+    color: #fff;
+    border: none;
+    border: 1px solid #0578F7;
+}
+
+
+
+/*  */
+.history {
+    padding: 12px 0px;
+}
+
+.history ul li {
+    padding: 9px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    /* border-bottom: 1px solid #fff; */
+}
+
+.history ul li p:last-child {
+    font-size: 12px;
+}
+
+.history li i {
+    text-transform: capitalize;
+}
+
+
+/* 
+::-webkit-scrollbar {
+    display: none;
+} */
+
+
+/* @media(max-width:380px) Iphone SE & others */
+/* @media(max-width:415px) Iphone 11 & Iphone XR */
