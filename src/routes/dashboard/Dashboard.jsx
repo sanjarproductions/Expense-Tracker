@@ -1,12 +1,11 @@
 import { useState, useRef } from "react"
-import "./Home.css"
-// import { Routes, Route } from "react-router-dom"
+import "./Dashboard.css"
 
 import cashIcon from "../../assets/CashIcon.svg"
 
 //$0.50 US Premium Cost Inshallah
 
-const Home = () => {
+const Dashboard = () => {
   const [optionValue, setOptionValue] = useState("")
   const [Currency, setCurrency] = useState("USD")
   const [transactions, setTransactions] = useState([])
@@ -67,7 +66,8 @@ const Home = () => {
     setOptionValue("")
   }
 
-  console.log(transactions)
+
+  // console.log(TransactionAmount.current.value.toLocaleString())
 
   // useEffect(() => {
 
@@ -76,7 +76,18 @@ const Home = () => {
 
   return (
     <>
-
+      <nav>
+        <div className="container">
+          <div className="flex">
+            <img className="logo" src="/favicon.svg" alt="" />
+            <div>
+              <a href="/statistics">Statistics</a>
+              <a href="/history">History</a>
+              <a href="#" style={{ opacity: 0.3 }}>Premium</a>
+            </div>
+          </div>
+        </div>
+      </nav>
       <main>
         <div className="container">
           <section className="balance">
@@ -126,7 +137,7 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Dashboard
 
 
 
