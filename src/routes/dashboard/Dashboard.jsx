@@ -1,7 +1,8 @@
 import { useState, useRef } from "react"
 import "./Dashboard.css"
-
 import cashIcon from "../../assets/CashIcon.svg"
+
+import { Link } from "react-router-dom"
 
 //$0.50 US Premium Cost Inshallah
 
@@ -81,9 +82,9 @@ const Dashboard = () => {
           <div className="flex">
             <img className="logo" src="/favicon.svg" alt="" />
             <div>
-              <a href="/statistics">Statistics</a>
-              <a href="/history">History</a>
-              <a href="#" style={{ opacity: 0.3 }}>Premium</a>
+              <Link to="/statistics">Statistics</Link>
+              <Link to="/history">History</Link>
+              <Link to="#" style={{ opacity: 0.3 }}>Premium</Link>
             </div>
           </div>
         </div>
@@ -151,8 +152,14 @@ export default Dashboard
 
 // local storage
 // 1000 => 1.000 for visual 
+
+// https://www.google.com/search?q=how+to+split+the+number+while+user+is+typing+in+the+input&rlz=1C5CHFA_enUZ1103UZ1103&oq=how+to+split+the+number+while+user+is+typing+in+the+input&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRiPAtIBCTE0OTUyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+// https://stackoverflow.com/questions/55518820/how-to-add-thousands-separator-while-user-is-typing
+
+// History page
+// only last 3-5 transactions onthe main and full history at history.jsx 
 // Mobile
 
-// History & Statisitcs (pie-chart) page
+// Statisitcs (pie-chart) page
 // Starting point (for a lot of people it isn't gonna be $0)
 // Stripe Premium
