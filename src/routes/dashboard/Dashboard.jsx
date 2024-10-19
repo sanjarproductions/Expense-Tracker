@@ -1,19 +1,36 @@
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import "./Dashboard.css"
 import cashIcon from "../../assets/CashIcon.svg"
 
-import { Link } from "react-router-dom"
 
 //$0.50 US Premium Cost Inshallah
 
 const Dashboard = () => {
   const [optionValue, setOptionValue] = useState("")
+
   const [Currency, setCurrency] = useState("USD")
   const [transactions, setTransactions] = useState([])
   const [Change, setChange] = useState(0)
   const TransactionAmount = useRef(null)
   const TransactionLabel = useRef(null)
 
+  // trying to make 1000 => 1.000 
+  // const [inputValue, setInputvalue] = useState("")
+  // function splitTransactionAmount(event) {
+  //   let newValue = Number(event.target.value)
+  //   if (newValue > 1000) {
+  //     setInputvalue(newValue.toLocaleString())
+  //     console.log(inputValue)
+  //   }
+  // }
+
+  function saveToLocalStorage() {
+    localStorage.setItem("Expense", "10")
+  }
+
+  function getItemFromLocalStorage() {
+    console.log(localStorage.getItem("Expense"))
+  }
 
   function handleSelect(event) {
     setOptionValue(event.target.value)
@@ -23,8 +40,7 @@ const Dashboard = () => {
   function Insert(e) {
     e.preventDefault();
 
-    const saveOptionValue = optionValue;
-
+    let saveOptionValue = optionValue;
     let label = TransactionLabel.current.value.trim();
     let amount = Number(TransactionAmount.current.value);
 
@@ -46,6 +62,8 @@ const Dashboard = () => {
         type: saveOptionValue,
         date: new Date().toLocaleString(),
       })
+      let string = JSON.stringify(transactions)
+      localStorage.setItem("transaction", string)
     }
 
     else if (saveOptionValue == "expense") {
@@ -56,6 +74,7 @@ const Dashboard = () => {
         type: saveOptionValue,
         date: new Date().toLocaleString(),
       })
+      // localStorage.setItem(transactions)
     }
 
     else {
@@ -67,9 +86,6 @@ const Dashboard = () => {
     setOptionValue("")
   }
 
-
-  // console.log(TransactionAmount.current.value.toLocaleString())
-
   // useEffect(() => {
 
   // }, [])
@@ -77,20 +93,11 @@ const Dashboard = () => {
 
   return (
     <>
-      <nav>
-        <div className="container">
-          <div className="flex">
-            <img className="logo" src="/favicon.svg" alt="" />
-            <div>
-              <Link to="/statistics">Statistics</Link>
-              <Link to="/history">History</Link>
-              <Link to="#" style={{ opacity: 0.3 }}>Premium</Link>
-            </div>
-          </div>
-        </div>
-      </nav>
       <main>
         <div className="container">
+          {/* <button onClick={saveToLocalStorage}>Save to LS</button> */}
+          {/* <button onClick={getItemFromLocalStorage}>Get from LS</button> */}
+
           <section className="balance">
             <div className="flex client-balance__flex">
               <img src={cashIcon} className="" alt="" />
@@ -124,10 +131,13 @@ const Dashboard = () => {
 
           <section className="history">
             <ul>
-              {
+              {/* {
                 transactions.map((transaction, i) => (
                   <li key={i}> <p><i>{transaction.label}</i> : {transaction.type === "income" ? "+" : transaction.type === "expense" ? "-" : ""}{transaction.amount} {Currency}</p>  <p>{transaction.date}</p></li>
                 ))
+              } */}
+              {
+                localStorage.getItem("transaction")
               }
             </ul>
           </section>
@@ -151,10 +161,7 @@ export default Dashboard
 // + make income and expense (selects) not btns
 
 // local storage
-// 1000 => 1.000 for visual 
-
-// https://www.google.com/search?q=how+to+split+the+number+while+user+is+typing+in+the+input&rlz=1C5CHFA_enUZ1103UZ1103&oq=how+to+split+the+number+while+user+is+typing+in+the+input&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRiPAtIBCTE0OTUyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
-// https://stackoverflow.com/questions/55518820/how-to-add-thousands-separator-while-user-is-typing
+// - 1000 => 1.000 for visual 
 
 // History page
 // only last 3-5 transactions onthe main and full history at history.jsx 

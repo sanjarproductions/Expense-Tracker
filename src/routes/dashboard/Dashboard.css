@@ -31,40 +31,6 @@ body {
     background: #0C0C0C;
 }
 
-nav {
-    padding: 50px 0px;
-
-}
-
-nav .container {
-    /* border: 1px solid #fff; */
-    padding: 12px 35px;
-    border-radius: 40px;
-    background: #2B2B2B;
-}
-
-nav .logo {
-    max-width: 35px;
-}
-
-nav .flex {
-    justify-content: space-between;
-
-}
-
-nav .flex div {
-    display: flex;
-    gap: 30px;
-}
-
-nav .flex a {
-    color: #fff;
-}
-
-nav .flex a:hover {
-    /* border: 1px solid #fff; */
-}
-
 main {
     color: #fff;
     padding: 50px 0px;

@@ -10,9 +10,7 @@ const Home = () => {
                     <div className="flex">
                         <img className="logo" src="/favicon.svg" alt="" />
                         <div>
-                            <Link to="/dashboard">Dashboard</Link>
-                            {/* <Link to="/history">History</Link> */}
-                            {/* <Link to="#" style={{ opacity: 0.3 }}>Premium</Link> */}
+                            <Link to="/dashboard">Get Stared</Link>
                         </div>
                     </div>
                 </div>
