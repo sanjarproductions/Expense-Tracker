@@ -24,13 +24,13 @@ const Dashboard = () => {
   //   }
   // }
 
-  function saveToLocalStorage() {
-    localStorage.setItem("Expense", "10")
-  }
+  // function saveToLocalStorage() {
+  //   localStorage.setItem("Expense", "10")
+  // }
 
-  function getItemFromLocalStorage() {
-    console.log(localStorage.getItem("Expense"))
-  }
+  // function getItemFromLocalStorage() {
+  //   console.log(localStorage.getItem("Expense"))
+  // }
 
   function handleSelect(event) {
     setOptionValue(event.target.value)
