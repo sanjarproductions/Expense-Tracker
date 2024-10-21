@@ -10,27 +10,14 @@ const Dashboard = () => {
 
   const [Currency, setCurrency] = useState("USD")
   const [transactions, setTransactions] = useState([])
-  const [Change, setChange] = useState(0)
+
+  const [balance, setBalance] = useState(() => {
+    const storedBalance = localStorage.getItem("balance");
+    return storedBalance ? Number(storedBalance) : 0;
+  })
+
   const TransactionAmount = useRef(null)
   const TransactionLabel = useRef(null)
-
-  // trying to make 1000 => 1.000 
-  // const [inputValue, setInputvalue] = useState("")
-  // function splitTransactionAmount(event) {
-  //   let newValue = Number(event.target.value)
-  //   if (newValue > 1000) {
-  //     setInputvalue(newValue.toLocaleString())
-  //     console.log(inputValue)
-  //   }
-  // }
-
-  // function saveToLocalStorage() {
-  //   localStorage.setItem("Expense", "10")
-  // }
-
-  // function getItemFromLocalStorage() {
-  //   console.log(localStorage.getItem("Expense"))
-  // }
 
   function handleSelect(event) {
     setOptionValue(event.target.value)
@@ -55,26 +42,27 @@ const Dashboard = () => {
     }
 
     if (saveOptionValue == "income") {
-      setChange(Change + amount);
+      setBalance(balance + amount);
       transactions.unshift({
         label,
         amount,
         type: saveOptionValue,
         date: new Date().toLocaleString(),
       })
-      let string = JSON.stringify(transactions)
-      localStorage.setItem("transaction", string)
+      let data = JSON.stringify(transactions)
+      localStorage.setItem("transactions", data)
     }
 
     else if (saveOptionValue == "expense") {
-      setChange(Change - amount);
+      setBalance(balance - amount);
       transactions.unshift({
         label,
         amount,
         type: saveOptionValue,
         date: new Date().toLocaleString(),
       })
-      // localStorage.setItem(transactions)
+      let data = JSON.stringify(transactions)
+      localStorage.setItem("transactions", data)
     }
 
     else {
@@ -86,25 +74,32 @@ const Dashboard = () => {
     setOptionValue("")
   }
 
-  // useEffect(() => {
+  useEffect(() => {
+    localStorage.setItem("balance", balance)
+  }, [balance])
 
-  // }, [])
-  // []ni ichida narsa yozsangiz (masalan select) usha ozgarganda useeffect ham qaytadan fetch qiladi va qozgaladi
+  useEffect(() => {
+    const storedTransactions = localStorage.getItem("transactions");
+    const storedBalance = localStorage.getItem("balance");
+    if (storedTransactions) {
+      setTransactions(JSON.parse(storedTransactions));
+    }
+    if (storedBalance) {
+      setBalance(Number(storedBalance))
+    }
+  }, [])
 
   return (
     <>
       <main>
         <div className="container">
-          {/* <button onClick={saveToLocalStorage}>Save to LS</button> */}
-          {/* <button onClick={getItemFromLocalStorage}>Get from LS</button> */}
-
           <section className="balance">
             <div className="flex client-balance__flex">
               <img src={cashIcon} className="" alt="" />
               <p>Balance: </p>
             </div>
             <div>
-              <p>{Change} {Currency}</p>
+              <p>{balance} {Currency}</p>
             </div>
           </section>
 
@@ -131,13 +126,10 @@ const Dashboard = () => {
 
           <section className="history">
             <ul>
-              {/* {
+              {
                 transactions.map((transaction, i) => (
                   <li key={i}> <p><i>{transaction.label}</i> : {transaction.type === "income" ? "+" : transaction.type === "expense" ? "-" : ""}{transaction.amount} {Currency}</p>  <p>{transaction.date}</p></li>
                 ))
-              } */}
-              {
-                localStorage.getItem("transaction")
               }
             </ul>
           </section>
@@ -160,7 +152,7 @@ export default Dashboard
 // + add simbols +/- to make it visually unuderstandable 
 // + make income and expense (selects) not btns
 
-// local storage
+// + local storage
 // - 1000 => 1.000 for visual 
 
 // History page
@@ -170,3 +162,11 @@ export default Dashboard
 // Statisitcs (pie-chart) page
 // Starting point (for a lot of people it isn't gonna be $0)
 // Stripe Premium
+
+
+// useEffect(() => {
+
+// }, [])
+// []ni ichida narsa yozsangiz (masalan select) usha ozgarganda useeffect ham qaytadan fetch qiladi va qozgaladi
+
+
