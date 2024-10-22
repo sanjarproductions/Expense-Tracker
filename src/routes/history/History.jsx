@@ -1,9 +1,17 @@
 import "./History.css"
 import { FinanceContext } from "../../contexts/FinanceContext"
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 
 const History = () => {
-  const { transactions, Currency } = useContext(FinanceContext)
+  const { transactions, setTransactions, Currency } = useContext(FinanceContext)
+
+  useEffect(() => {
+    const storedTransactions = localStorage.getItem("transactions");
+    if (storedTransactions) {
+      setTransactions(JSON.parse(storedTransactions));
+    }
+  }, [setTransactions])
+
   return (
     <>
       <div className="content history">
