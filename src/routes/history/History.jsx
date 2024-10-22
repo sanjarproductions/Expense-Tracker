@@ -21,7 +21,7 @@ const History = () => {
             {
               transactions.length === 0 ? (<p>No Transactions Yet</p>) : (
                 transactions.map((transaction, i) => (
-                  <li key={i}> <p><i>{transaction.label}</i> : {transaction.type === "income" ? "+" : transaction.type === "expense" ? "-" : ""}{transaction.amount} {Currency}</p>  <p>{transaction.date}</p></li>
+                  <li key={i}> <p><i>{transaction.label}</i> : {transaction.type === "income" ? "+" : transaction.type === "expense" ? "-" : ""}{transaction.amount} {Currency}</p>  <p className="transaction-data">{transaction.date}</p></li>
                 ))
               )
             }

@@ -121,6 +121,7 @@ const Dashboard = () => {
 
 
           <section className="history">
+            <h2 style={{ paddingBottom: 20 + "px" }}>Latest : (3)</h2>
             <ul>
               {
                 transactions.map((transaction, i) => (
@@ -156,12 +157,13 @@ export default Dashboard
 // Mobile
 
 // Statisitcs (pie-chart) page
+// Home Page Ladies and Gentel man
 // Starting point (for a lot of people it isn't gonna be $0)
-// Stripe Premium
-
+// Stripe/ Lemon / Paddle - Premium (1 week trial and 5/m cost inshallah)
+// Mobile App in React Native Inshallah
 
 // useEffect(() => {
-
+// 
 // }, [])
 // []ni ichida narsa yozsangiz (masalan select) usha ozgarganda useeffect ham qaytadan fetch qiladi va qozgaladi
 
