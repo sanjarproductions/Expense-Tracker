@@ -7,7 +7,7 @@ import History from "./routes/history/History"
 import Statistics from "./routes/statistics/Statistics"
 // 
 // Components
-import Nav from "./components/Nav/Nav"
+import Nav from "./components/nav/Nav"
 
 const App = () => {
 
