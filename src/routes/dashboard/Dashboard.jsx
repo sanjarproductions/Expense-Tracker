@@ -1,16 +1,17 @@
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useContext } from "react"
 import "./Dashboard.css"
+import { FinanceContext } from "../../contexts/FinanceContext"
+
+// Icons
 import cashIcon from "../../assets/CashIcon.svg"
 
 
 //$0.50 US Premium Cost Inshallah
 
 const Dashboard = () => {
+  const { Currency, transactions, setTransactions } = useContext(FinanceContext)
+
   const [optionValue, setOptionValue] = useState("")
-
-  const [Currency, setCurrency] = useState("USD")
-  const [transactions, setTransactions] = useState([])
-
   const [balance, setBalance] = useState(() => {
     const storedBalance = localStorage.getItem("balance");
     return storedBalance ? Number(storedBalance) : 0;
@@ -41,33 +42,28 @@ const Dashboard = () => {
       return;
     }
 
+    const newTransaction = {
+      label,
+      amount,
+      type: saveOptionValue,
+      date: new Date().toLocaleString(),
+    };
+
     if (saveOptionValue == "income") {
       setBalance(balance + amount);
-      transactions.unshift({
-        label,
-        amount,
-        type: saveOptionValue,
-        date: new Date().toLocaleString(),
-      })
-      let data = JSON.stringify(transactions)
-      localStorage.setItem("transactions", data)
+      setTransactions([newTransaction, ...transactions])
     }
 
     else if (saveOptionValue == "expense") {
       setBalance(balance - amount);
-      transactions.unshift({
-        label,
-        amount,
-        type: saveOptionValue,
-        date: new Date().toLocaleString(),
-      })
-      let data = JSON.stringify(transactions)
-      localStorage.setItem("transactions", data)
+      setTransactions([newTransaction, ...transactions])
     }
 
     else {
       alert("Please select transaction type, using Select")
     }
+
+    localStorage.setItem("transactions", JSON.stringify([newTransaction, ...transactions]))
 
     TransactionLabel.current.value = "";
     TransactionAmount.current.value = "";
@@ -87,7 +83,7 @@ const Dashboard = () => {
     if (storedBalance) {
       setBalance(Number(storedBalance))
     }
-  }, [])
+  }, [setTransactions])
 
   return (
     <>
@@ -112,8 +108,8 @@ const Dashboard = () => {
 
             <form onSubmit={Insert}>
               <div className="actions">
-                <select onChange={handleSelect} value={optionValue}>
-                  <option disabled value={""} selected>Select</option>
+                <select onChange={handleSelect} value={optionValue} required>
+                  <option disabled value={""}>Select</option>
                   <option value="expense">Expense</option>
                   <option value="income">Income</option>
                 </select>
@@ -155,7 +151,7 @@ export default Dashboard
 // + local storage
 // - 1000 => 1.000 for visual 
 
-// History page
+// + History page (Alhamdulillah, we learned useContext)
 // only last 3-5 transactions onthe main and full history at history.jsx 
 // Mobile
 

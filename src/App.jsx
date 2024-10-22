@@ -5,6 +5,7 @@ import Home from "./routes/home/Home"
 import Dashboard from "./routes/dashboard/Dashboard"
 import History from "./routes/history/History"
 import Statistics from "./routes/statistics/Statistics"
+
 // Components
 import Nav from "./components/Nav/Nav"
 
