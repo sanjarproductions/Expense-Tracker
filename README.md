@@ -1,6 +1,6 @@
 # 💸 Expense Tracker - Your Personal Finance Manager
 
-![App Demo](link-to-screenshot-or-gif)
+![App Demo](https://theexpenses.vercel.app/)
 
 ## 🏆 Why Choose Expense Tracker?
 
@@ -31,7 +31,7 @@ Take control of your finances with **Expense Tracker** – a lightweight, easy-t
 
 Deploy your own instance of **Expense Tracker** or try the live demo! It's 100% free to use, and you can start tracking your money in minutes.
 
-[Live Demo Link](#)
+[Live Demo Link](https://theexpenses.vercel.app/)
 
 ---
 
