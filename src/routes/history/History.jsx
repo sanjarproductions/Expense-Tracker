@@ -16,7 +16,15 @@ const History = () => {
     <>
       <div className="content history">
         <div className="container">
-          <h1>History:</h1>
+          <div className="flex" style={{ alignItems: "end", justifyContent: "space-between" }}>
+            <h1>History:</h1>
+            
+            <select style={{ pointerEvents: "none", opacity: 0.5 }}>
+              <option value="Recent">Recent</option>
+              <option value="Oldest">Oldest</option>
+            </select>
+            
+          </div>
           <ul>
             {
               transactions.length === 0 ? (<p>No Transactions Yet</p>) : (

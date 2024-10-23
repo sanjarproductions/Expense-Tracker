@@ -18,11 +18,11 @@ nav .flex {
     justify-content: space-between;
 
 }
-
+/* 
 nav .flex div {
     display: flex;
     gap: 30px;
-}
+} */
 
 nav .flex a {
     color: #fff;

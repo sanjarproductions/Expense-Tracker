@@ -4,7 +4,6 @@ nav {
 }
 
 nav .container {
-    /* border: 1px solid #fff; */
     padding: 12px 35px;
     border-radius: 40px;
     background: #2B2B2B;
@@ -14,20 +13,93 @@ nav .logo {
     max-width: 35px;
 }
 
-nav .flex {
+nav .menu-desktop {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-
 }
 
-nav .flex div {
+.desktop-links {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
-nav .flex a {
+nav a {
     color: #fff;
 }
 
-nav .flex a:hover {
-    /* border: 1px solid #fff; */
+nav .menu-mobile {
+    display: none;
+}
+
+nav .something {
+    display: none;
+}
+
+@media(max-width:380px) {
+    nav .menu-desktop {
+        display: none;
+    }
+
+    nav .menu-mobile {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav .menu-mobile button {
+        background: transparent;
+        border: none;
+    }
+
+    nav .menu-mobile button svg {
+        color: #fff;
+        font-size: 40px;
+        width: 100%;
+        height: 100%;
+    }
+
+    nav .something {
+        padding: 15px 25px;
+        display: none;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        width: 95%;
+        height: 100%;
+        backdrop-filter: blur(40px);
+        /* background: rgba(0, 0, 0, 10); */
+    }
+
+    nav .something.open {
+        display: block;
+
+    }
+
+    nav .something.open .mobile-links {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 30px;
+    }
+
+    nav .something.open .close-btn {
+        background: transparent;
+        border: none;
+    }
+
+    nav .something.open .close-btn svg {
+        color: #fff;
+        font-size: 50px;
+    }
+
+    nav .something.open .mobile-links a {
+        font-size: 27px;
+        border-bottom: 1px solid #ffffff4d;
+        padding-bottom: 30px;
+    }
+
 }

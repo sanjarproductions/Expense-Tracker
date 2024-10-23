@@ -124,7 +124,7 @@ const Dashboard = () => {
             <h2 style={{ paddingBottom: 20 + "px" }}>Latest : (3)</h2>
             <ul>
               {
-                transactions.map((transaction, i) => (
+                transactions.slice(0, 3).map((transaction, i) => (
                   <li key={i}> <p><i>{transaction.label}</i> : {transaction.type === "income" ? "+" : transaction.type === "expense" ? "-" : ""}{transaction.amount} {Currency}</p>  <p>{transaction.date}</p></li>
                 ))
               }
@@ -153,11 +153,11 @@ export default Dashboard
 // - 1000 => 1.000 for visual 
 
 // + History page (Alhamdulillah, we learned useContext)
-// only last 3-5 transactions onthe main and full history at history.jsx 
-// Mobile
+// + only last 3-5 transactions on the main and full history at history.jsx 
+// + Mobile
 
 // Statisitcs (pie-chart) page
-// Home Page Ladies and Gentel man
+// Home Page Ladies and Gentel-Man
 // Starting point (for a lot of people it isn't gonna be $0)
 // Stripe/ Lemon / Paddle - Premium (1 week trial and 5/m cost inshallah)
 // Mobile App in React Native Inshallah
