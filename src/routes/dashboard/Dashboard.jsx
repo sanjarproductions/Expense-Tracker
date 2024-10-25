@@ -156,8 +156,14 @@ export default Dashboard
 // + only last 3-5 transactions on the main and full history at history.jsx 
 // + Mobile
 
+// Home page
+// Legal
+// - Privacy policy
+// - Terms & Conditions
+// Mobile responsive inshallah
+// Firebase Sighn up & login
+
 // Statisitcs (pie-chart) page
-// Home Page Ladies and Gentel-Man
 // Starting point (for a lot of people it isn't gonna be $0)
 // Stripe/ Lemon / Paddle - Premium (1 week trial and 5/m cost inshallah)
 // Mobile App in React Native Inshallah
