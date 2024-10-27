@@ -6,8 +6,8 @@ import Dashboard from "./routes/dashboard/Dashboard"
 import History from "./routes/history/History"
 import Statistics from "./routes/statistics/Statistics"
 
-import Privacy from "./routes/legal/privacy"
-import Terms from "./routes/legal/terms"
+import Privacy from "./routes/legal/Privacy"
+import Terms from "./routes/legal/Terms"
 
 // Components
 import Nav from "./components/nav/Nav"
