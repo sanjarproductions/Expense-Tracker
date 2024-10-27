@@ -4,10 +4,20 @@ nav {
 }
 
 nav .container {
-    /* border: 1px solid #fff; */
     padding: 12px 35px;
     border-radius: 40px;
     background: #2B2B2B;
+}
+
+nav .logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+nav .logo-wrapper p {
+    font-size: 21px;
+    color: #fff;
 }
 
 nav .logo {
@@ -18,12 +28,165 @@ nav .flex {
     justify-content: space-between;
 
 }
-/* 
-nav .flex div {
-    display: flex;
-    gap: 30px;
-} */
 
 nav .flex a {
     color: #fff;
+}
+
+/* Main */
+
+.home-main {
+    padding: 0;
+}
+
+.home-main section {
+    margin-bottom: 50px;
+}
+
+/* Hero */
+
+.hero {
+    overflow: hidden;
+}
+
+.hero .container {
+    padding-top: 70px;
+    padding-bottom: 110px;
+}
+
+.hero .container .flex {
+    justify-content: space-between;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 64px;
+    font-weight: 700;
+    padding-bottom: 23px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 32px;
+    max-width: 580px;
+}
+
+.hero-text .getstarted {
+    padding: 14px 28px;
+    border-radius: 6px;
+    background: #fff;
+    color: #000;
+    transition: 200ms;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    font-style: italic;
+    display: inline-block;
+}
+
+.hero-text .getstarted:hover {
+    transform: scale(1.1);
+    background: #fceba8;
+    color: #000;
+}
+
+.hero-img-wrapper {
+    position: relative;
+}
+
+.hero-img-wrapper img {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    width: 100%;
+}
+
+.hero-img-wrapper .blur {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    width: 478px;
+    height: 478px;
+    border-radius: 50%;
+    background: #FFF7D7;
+    filter: blur(100px);
+    z-index: 0;
+}
+
+/* How To Use */
+
+.howto-use {}
+
+.howto-use .container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.howto-use .container .flex {
+    gap: 30px;
+}
+
+.howto-use img {
+    max-width: 620px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+.howto-use-text h2 {
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    max-width: 450px;
+}
+
+.howto-use-text p {
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 550px;
+    padding-bottom: 20px;
+}
+
+/* Video Tutorial */
+
+.video-tutorial .container {
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 70px;
+    background: #2B2B2B;
+    padding: 50px 0px;
+    color: #fff;
+}
+
+footer .container {
+    padding: 0px 20px;
+}
+
+footer .flex {
+    align-items: start;
+    gap: 50px;
+}
+
+footer ul li a {
+    color: #fff;
+}
+
+footer ul li:first-child {
+    padding-bottom: 10px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

@@ -1,0 +1,33 @@
+.legal {
+    color: #fff;
+}
+
+.legal ul
+li,
+ol {
+    list-style: decimal
+}
+
+.legal ul {
+    padding: 20px 30px;
+}
+
+.legal ul li {
+    padding-bottom: 20px;
+    max-width: 500px;
+}
+
+.legal ul li b {
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.legal ul li p {
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.legal ul li a {
+    color: #fff;
+    text-decoration: underline;
+}

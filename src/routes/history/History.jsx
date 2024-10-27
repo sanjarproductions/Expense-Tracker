@@ -1,5 +1,5 @@
 import "./History.css"
-import { FinanceContext } from "../../contexts/FinanceContext"
+import { FinanceContext } from "../../context/FinanceContext"
 import { useContext, useEffect } from "react"
 
 const History = () => {

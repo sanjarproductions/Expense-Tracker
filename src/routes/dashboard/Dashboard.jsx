@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useContext } from "react"
 import "./Dashboard.css"
-import { FinanceContext } from "../../contexts/FinanceContext"
+import { FinanceContext } from "../../context/FinanceContext"
 
 // Icons
 import cashIcon from "../../assets/CashIcon.svg"
