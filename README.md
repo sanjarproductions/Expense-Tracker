@@ -1,6 +1,6 @@
 # 💸 Expense Tracker - Your Personal Finance Manager
 
-![App Demo](https://theexpenses.vercel.app/)
+[App Demo](https://theexpenses.vercel.app/)
 
 ## 🏆 Why Choose Expense Tracker?
 

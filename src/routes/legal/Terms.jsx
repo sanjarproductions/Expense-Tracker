@@ -11,7 +11,7 @@ const Terms = () => {
           <ul>
             <li>
               <b>Acceptance of Terms</b>
-              <p>By accessing and using Expensely, you agree to be bound by these terms.</p>
+              <i>By accessing and using Expensely, you agree to be bound by these terms.</i>
             </li>
             <li>
               <b>User Responsibilities</b>
