@@ -159,6 +159,105 @@ nav .flex a {
     padding-bottom: 100px;
 }
 
+/* Pricing */
+
+.pricing .container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.pricing .pricing-text {
+    text-align: center;
+}
+
+.pricing .pricing-text p {
+    padding-bottom: 30px;
+    color: #fceba8;
+}
+
+.pricing .pricing-text h3 {
+    padding-bottom: 15px;
+    font-size: 40px;
+    /* color: #fceba8; */
+}
+
+.pricing .pricing-text i {
+    font-size: 15px;
+}
+
+.pricing .flex {
+    justify-content: space-evenly;
+}
+
+.pricing .card {
+    margin-top: 30px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pricing .card.onetime {
+    border: 1px solid #fceba8;
+    /* background: #fceba87b; */
+}
+
+.pricing .card strong {
+    font-size: 23px;
+}
+
+.pricing .card p {
+    font-size: 40px;
+}
+
+.pricing ul {
+    padding: 0px 10px;
+}
+
+.pricing ul li {
+    list-style-type: circle;
+    padding-bottom: 5px;
+}
+
+.pricing .card.onetime .pay-btn {
+    background: #fceba8;
+    color: #000;
+}
+
+.pricing .pay-btn {
+    background: #ffffff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid transparent;
+    padding: 10px 0px;
+    border-radius: 10px;
+    transition: 200ms;
+    cursor: pointer;
+    outline: none;
+
+}
+
+.pricing .card.onetime .pay-btn:hover {
+    background: transparent;
+    border: 1px solid #fceba8;
+    color: #fceba8;
+}
+
+.pricing .pay-btn:hover {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.pricing .pay-btn-img {
+    max-width: 25px;
+}
+
 /* Footer */
 
 footer {

@@ -5,6 +5,7 @@ import Home from "./routes/home/Home"
 import Dashboard from "./routes/dashboard/Dashboard"
 import History from "./routes/history/History"
 import Statistics from "./routes/statistics/Statistics"
+import Prices from "./routes/prices/Prices"
 
 import Privacy from "./routes/legal/Privacy"
 import Terms from "./routes/legal/Terms"
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/history" element={<History />} />
           <Route path="/statistics" element={<Statistics />} />
+          <Route path="/prices" element={<Prices />} />
 
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
