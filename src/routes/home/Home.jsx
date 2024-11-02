@@ -92,7 +92,7 @@ const Home = () => {
                         <div className="pricing-text">
                             <p>Pricing</p>
                             <h3>Stop feeling guilty for spending</h3>
-                            <i>100% for first 5 customers</i>
+                            <i>100% discount for first 5 customers</i>
                         </div>
                         <div className="flex">
                             <div className="card subscription">
