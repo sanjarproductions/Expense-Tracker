@@ -49,6 +49,14 @@ const Privacy = () => {
               <p>We may update this policy. Any changes will be posted on our website, so please review it periodically.</p>
             </li>
             <li>
+              <b>Cancellation Policy</b>
+              <p>Subscription Plan ($5/month): You may cancel your subscription at any time.</p>
+            </li>
+            <li>
+              <b>Refund</b>
+              <p>Lifetime Plan ($20): If you decide to cancel within one week of purchase, you are eligible for a full refund. After one week, the plan is non-refundable.</p>
+            </li>
+            <li>
               <b>Contact Us</b>
               <p>If you have any questions, contact us at <a href="mailto:sanjarkama26@gmail.com">sanjarkama26@gmail.com</a></p>
             </li>
